@@ -6,81 +6,8 @@ import { useContext } from 'react';
 
 
 const Productos = props => {
-    const { total, setTotal } = useContext(MyContext)
-    const products = [
-        {
-            id: 1,
-            name: 'Margarita',
-            href: '#',
-            price: '4990',
-            imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
-            imageAlt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
-            ingredientes: ['Tomate', 'Carne', 'Cebolla', 'Lechuga'],
-        },
-        {
-            id: 2,
-            name: 'Nomad Tumbler',
-            href: '#',
-            price: '3500',
-            imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg',
-            imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
-            ingredientes: ['Tomate', 'Carne', 'Cebolla', 'Lechuga'],
-        },
-        {
-            id: 3,
-            name: 'Focus Paper Refill',
-            href: '#',
-            price: '8900',
-            imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg',
-            imageAlt: 'Person using a pen to cross a task off a productivity paper card.',
-            ingredientes: ['Tomate', 'Carne', 'Cebolla', 'Lechuga'],
-        },
-        {
-            id: 4,
-            name: 'Machined Mechanical Pencil',
-            href: '#',
-            price: '3500',
-            imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg',
-            imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
-            ingredientes: ['Tomate', 'Carne', 'Cebolla', 'Lechuga'],
-        }, {
-            id: 5,
-            name: 'Earthen Bottle',
-            href: '#',
-            price: '4800',
-            imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
-            imageAlt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
-            ingredientes: ['Tomate', 'Carne', 'Cebolla', 'Lechuga'],
-        },
-        {
-            id: 6,
-            name: 'Nomad Tumbler',
-            href: '#',
-            price: '3500',
-            imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg',
-            imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
-            ingredientes: ['Tomate', 'Carne', 'Cebolla', 'Lechuga'],
-        },
-        {
-            id: 7,
-            name: 'Focus Paper Refill',
-            href: '#',
-            price: '8900',
-            imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg',
-            imageAlt: 'Person using a pen to cross a task off a productivity paper card.',
-            ingredientes: ['Tomate', 'Carne', 'Cebolla', 'Lechuga'],
-        },
-        {
-            id: 8,
-            name: 'Machined Mechanical Pencil',
-            href: '#',
-            price: '3500',
-            imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg',
-            imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
-            ingredientes: ['Tomate', 'Carne', 'Cebolla', 'Lechuga'],
-        },
-        // More products...
-    ]
+    const { total, setTotal, productos } = useContext(MyContext)
+    const products = productos
     return (
         <>
 
