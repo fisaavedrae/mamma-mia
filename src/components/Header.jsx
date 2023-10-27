@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import { MyContext } from './context/MyContext'
 
 
 const Header = props => {
-    const [total, setTotal] = useState(0)
+    const { total } = useContext(MyContext)
     return (
         <>
             <header className="bg-white">
@@ -18,7 +19,7 @@ const Header = props => {
                     <div className="py-6">
 
                         <Link to="/Carrito" className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"           >
-                            <i className="fa-solid fa-cart-shopping"></i> $33.878
+                            <i className="fa-solid fa-cart-shopping"></i> {total}
                         </Link>
                     </div>
                 </nav>
