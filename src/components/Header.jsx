@@ -17,9 +17,8 @@ const Header = props => {
                         </Link>
                     </div>
                     <div className="py-6">
-
-                        <Link to="/Carrito" className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"           >
-                            <i className="fa-solid fa-cart-shopping"></i> {total}
+                        <Link to="/Carrito" className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                            <i className="fa-solid fa-cart-shopping"></i> $ {total}
                         </Link>
                     </div>
                 </nav>

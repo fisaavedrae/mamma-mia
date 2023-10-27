@@ -1,12 +1,11 @@
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import { MyContext } from './components/context/MyContext'
 import './App.css'
-import Header from './components/Header'
-import Productos from './components/Productos'
 import DetalleProducto from './pages/DetalleProducto'
 import HomePage from './pages/HomePage'
 import Carrito from './pages/Carrito'
-import { MyContext } from './components/context/MyContext'
+
 
 function App() {
   const [total, setTotal] = useState(0)
