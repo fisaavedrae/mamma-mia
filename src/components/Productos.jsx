@@ -12,10 +12,21 @@ const Productos = props => {
         navigate(`/DetalleProducto/${id}`);
     };
 
-    const agregarCarrito = (id, price) => {
-        setTotal(Number(total) + Number(price))
-        carro.push(id)
-        setCarro(carro)
+    const agregarCarrito = (obj) => {
+        setTotal(Number(total) + Number(obj.price))
+        const indice = carro.findIndex(item => item.id === obj.id)
+
+        if (indice !== -1) {
+            carro[indice].qty = Number(obj.qty) + 1
+            console.log('carro antes de eliminar', carro)
+            setCarro([...carro])
+        }
+        else {
+            obj.qty = 1
+            carro.push(obj)
+            setCarro(carro)
+        }
+
     }
 
     const products = productos
@@ -54,13 +65,13 @@ const Productos = props => {
 
                                 <button
                                     onClick={() => irAProducto(product.id)}
-                                    className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                    className="rounded-md bg-amber-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                                 >
                                     Ver Producto
                                 </button>
                                 <button
-                                    onClick={() => agregarCarrito(product.id, product.price)}
-                                    className="rounded-md ml-5 bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                    onClick={() => agregarCarrito(product)}
+                                    className="rounded-md ml-5 bg-amber-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                                 >
                                     <i className="fa-solid fa-cart-shopping"></i>
                                 </button>

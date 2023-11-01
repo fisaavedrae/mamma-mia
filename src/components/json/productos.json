@@ -11,7 +11,8 @@
             "Tomate",
             "Albahaca",
             "Queso Mozzarella"
-        ]
+        ],
+        "qty": 0
     },
     {
         "id": 2,
@@ -25,7 +26,8 @@
             "Tomate",
             "Mozzarella de búfala",
             "Albahaca"
-        ]
+        ],
+        "qty": 0
     },
     {
         "id": 3,
@@ -39,7 +41,8 @@
             "Tomate",
             "Queso Mozzarella",
             "Pimenton"
-        ]
+        ],
+        "qty": 0
     },
     {
         "id": 4,
@@ -53,7 +56,8 @@
             "Tomate",
             "Queso Mozzarella",
             "Peperoni"
-        ]
+        ],
+        "qty": 0
     },
     {
         "id": 5,
@@ -69,7 +73,8 @@
             "Queso Gorgonzola",
             "Queso Parmesano",
             "Queso Provolone"
-        ]
+        ],
+        "qty": 0
     },
     {
         "id": 6,
@@ -86,7 +91,8 @@
             "Pollo",
             "Tocino",
             "Cebolla"
-        ]
+        ],
+        "qty": 0
     },
     {
         "id": 7,
@@ -104,7 +110,8 @@
             "Tomates cherry",
             "Pimientos",
             "Champiñones"
-        ]
+        ],
+        "qty": 0
     },
     {
         "id": 8,
@@ -121,6 +128,7 @@
             "Cebolla",
             "Chorizo",
             "Aceitunas"
-        ]
+        ],
+        "qty": 0
     }
 ]
