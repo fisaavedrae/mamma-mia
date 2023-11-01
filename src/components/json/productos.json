@@ -1,11 +1,12 @@
 [
     {
         "id": 1,
-        "name": "Margarita",
+        "name": "Margherita",
         "href": "#",
         "price": "4990",
         "imageSrc": "https://cdn.pixabay.com/photo/2020/06/08/16/49/pizza-5275191_1280.jpg",
         "imageAlt": "Margarita",
+        "description": "La pizza Margherita es una auténtica obra maestra culinaria italiana que combina la simplicidad con la excelencia. Su base de masa delgada y crujiente se convierte en el lienzo perfecto para una mezcla armoniosa de ingredientes clásicos. La salsa de tomate, hecha con tomates maduros y aromáticos, se extiende delicadamente sobre la masa, aportando un sabor dulce y ácido. Las rebanadas de mozzarella fresca, colocadas estratégicamente sobre la salsa de tomate, se funden en el horno para crear una cubierta cremosa. Las hojas de albahaca fresca, con su aroma herbáceo, agregan un toque final que resalta los sabores naturales de la pizza. Esta combinación sencilla pero equilibrada de ingredientes es un tributo a los colores de la bandera italiana, ofreciendo una explosión de sabores frescos y auténticos que hacen de la pizza Margherita un clásico irresistible para los amantes de la cocina italiana.",
         "ingredientes": [
             "Tomate",
             "Albahaca",
@@ -19,10 +20,11 @@
         "price": "3500",
         "imageSrc": "https://cdn.pixabay.com/photo/2017/09/30/15/10/plate-2802332_1280.jpg",
         "imageAlt": "Napolitana",
+        "description": "La pizza napolitana es la expresión máxima de la tradición culinaria italiana. Con su base de masa delgada y bordes ligeramente inflados, cocida en horno de leña a altas temperaturas, esta delicia se distingue por su simplicidad y calidad de ingredientes. La cubierta de salsa de tomate, mozzarella de búfala o mozzarella fresca, hojas de albahaca fresca y un toque de aceite de oliva extra virgen es una combinación clásica que crea una experiencia inigualable. La albahaca aporta un aroma fresco, el tomate ofrece un sabor dulce y ácido, mientras que la mozzarella, que se derrite y se vuelve dorada en el horno, brinda una cremosidad irresistible. Esta obra maestra napolitana, con sus sabores auténticos y su textura exquisita, es un tributo a la rica herencia culinaria de Nápoles y un viaje de deleite para los amantes de la pizza.",
         "ingredientes": [
             "Tomate",
-            "Queso Mozzarella",
-            "Peperoni"
+            "Mozzarella de búfala",
+            "Albahaca"
         ]
     },
     {
@@ -32,6 +34,7 @@
         "price": "8900",
         "imageSrc": "https://cdn.pixabay.com/photo/2017/02/15/10/57/pizza-2068272_1280.jpg",
         "imageAlt": "Pimenton",
+        "description": "La pizza de pimiento, o pizza pimentón, es una deliciosa interpretación que combina la clásica masa de pizza con una variedad de pimientos frescos. Presenta una base de masa crujiente y ligera, adornada con una exquisita mezcla de pimientos cortados en finas rodajas o tiras. Estos pimientos, que pueden ser de colores variados como rojo, amarillo o verde, aportan una explosión de sabores vibrantes y dulces que se complementan perfectamente con el queso derretido y la salsa de tomate. Esta pizza, a la vez audaz y sabrosa, ofrece una experiencia culinaria repleta de matices y frescura, ideal para los amantes de los sabores intensos y la combinación de ingredientes frescos.",
         "ingredientes": [
             "Tomate",
             "Queso Mozzarella",
@@ -45,6 +48,7 @@
         "price": "3500",
         "imageSrc": "https://cdn.pixabay.com/photo/2017/01/03/11/33/pizza-1949183_1280.jpg",
         "imageAlt": "Peperoni",
+        "description": "La pizza pepperoni es un clásico atemporal que deleita con su sabor audaz y reconfortante. Esta deliciosa pizza está coronada con generosas rodajas de pepperoni, un embutido de carne de cerdo sazonado con paprika y pimienta, que se dora y se vuelve ligeramente crujiente al cocinarse en el horno. Las rebanadas de pepperoni se colocan sobre una base de salsa de tomate y se mezclan con queso mozzarella derretido, creando un equilibrio entre la intensidad salada y ahumada del pepperoni y la suavidad del queso fundido. Esta combinación ofrece una explosión de sabores, convirtiendo cada bocado en una experiencia satisfactoria para los amantes de la pizza con un toque picante y lleno de sabor.",
         "ingredientes": [
             "Tomate",
             "Queso Mozzarella",
@@ -58,11 +62,13 @@
         "price": "4800",
         "imageSrc": "https://cdn.pixabay.com/photo/2016/05/05/09/19/pizza-1373508_1280.jpg",
         "imageAlt": "4 Quesos",
+        "description": "La pizza de cuatro quesos es una creación culinaria rica y reconfortante que combina una base de masa suave y crujiente con una mezcla exquisita de quesos. Esta tentadora pizza está cubierta con una combinación armoniosa de cuatro quesos distintivos, típicamente mozzarella, gorgonzola, parmesano y queso provolone, cada uno aportando su propio perfil de sabor. La mozzarella fundida proporciona cremosidad, el gorgonzola ofrece un toque distintivo y ligeramente picante, el parmesano agrega un sabor robusto y el queso provolone aporta una nota ahumada y suave. Juntos, estos quesos se combinan en una sinfonía de sabores, creando una experiencia llena de indulgencia para los amantes del queso. Cada bocado ofrece una mezcla de texturas y matices que hacen de esta pizza un festín para los sentidos.",
         "ingredientes": [
             "Tomate",
             "Queso Mozzarella",
+            "Queso Gorgonzola",
             "Queso Parmesano",
-            "Queso Gauda"
+            "Queso Provolone"
         ]
     },
     {
@@ -72,10 +78,14 @@
         "price": "3500",
         "imageSrc": "https://cdn.pixabay.com/photo/2017/06/21/00/08/pizza-2425450_1280.jpg",
         "imageAlt": "Jalapeño",
+        "description": "La pizza de jalapeños es una experiencia audaz y deliciosa que combina la base clásica de la pizza con un toque picante y vibrante. Presenta una masa horneada a la perfección, cubierta con rodajas frescas o en conserva de jalapeños, que ofrecen un toque de picante característico. Los jalapeños, con su sabor ligeramente picante y a la vez refrescante, se combinan con queso derretido y, a veces, con ingredientes adicionales como pollo, tocino o cebolla para aportar un equilibrio entre el picante y otros sabores. Esta pizza picante es ideal para aquellos que disfrutan de un toque audaz en su experiencia gastronómica, aportando un emocionante y sabroso contraste a cada bocado.",
         "ingredientes": [
             "Tomate",
             "Queso Mozzarella",
-            "Jalapeño"
+            "Jalapeño",
+            "Pollo",
+            "Tocino",
+            "Cebolla"
         ]
     },
     {
@@ -85,11 +95,15 @@
         "price": "8900",
         "imageSrc": "https://cdn.pixabay.com/photo/2020/04/29/03/30/pizza-5107039_1280.jpg",
         "imageAlt": "Primavera",
+        "description": "La pizza Primavera es un festín de frescura y colores que celebra la esencia de la estación primaveral. Presenta una masa de pizza ligera y crujiente como lienzo, adornada con una variedad de ingredientes frescos y vibrantes. En lugar de la típica salsa de tomate, puede llevar una base de aceite de oliva o pesto, y se complementa con una selección de vegetales de temporada, como espárragos, calabacines, tomates cherry, pimientos, champiñones y, a veces, pequeñas porciones de queso mozzarella o queso de cabra. Esta combinación de ingredientes frescos y coloridos aporta una explosión de sabores saludables y un toque ligero que evoca la frescura y vitalidad de la temporada primaveral en cada bocado.",
         "ingredientes": [
             "Tomate",
             "Queso Mozzarella",
-            "Lechuga",
-            "Esparrago"
+            "Espárragos",
+            "Calabacines",
+            "Tomates cherry",
+            "Pimientos",
+            "Champiñones"
         ]
     },
     {
@@ -99,11 +113,14 @@
         "price": "3500",
         "imageSrc": "https://cdn.pixabay.com/photo/2018/11/15/10/55/pizza-3816968_1280.jpg",
         "imageAlt": "Española",
+        "description": "La pizza española es una exquisita fusión entre la tradición culinaria italiana y los sabores característicos de España. Esta pizza única presenta una masa fina y crujiente, cubierta con una mezcla de ingredientes típicos de la cocina española. En lugar de la salsa de tomate tradicional, se utiliza una base de tomate frito o salsa de tomate condimentada con pimientos rojos, cebolla y especias españolas. Se complementa con una variedad de ingredientes como chorizo, jamón serrano, aceitunas, pimientos, cebolla y queso manchego. Esta combinación de sabores robustos y aromáticos crea una experiencia culinaria que evoca la riqueza de la gastronomía española, ofreciendo una pizza llena de calidez y carácter. Cada bocado es una celebración de la deliciosa y variada cultura culinaria española.",
         "ingredientes": [
             "Tomate",
-            "Queso Mozzarella",
-            "Jamon Serrano",
-            "Chorizo"
+            "Queso manchego",
+            "Pimientos rojos",
+            "Cebolla",
+            "Chorizo",
+            "Aceitunas"
         ]
     }
 ]

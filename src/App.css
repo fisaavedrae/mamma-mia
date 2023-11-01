@@ -13,3 +13,11 @@ body {
   margin: 0 auto;
 
 }
+
+.bg-current {
+  background-color: #FFEABF;
+}
+
+.logo {
+  height: 130px;
+}

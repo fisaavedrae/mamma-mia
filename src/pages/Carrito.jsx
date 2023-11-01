@@ -1,39 +1,33 @@
-import { Fragment, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
-import Header from '../components/Header'
-import Productos from '../components/Productos'
-import { Link } from 'react-router-dom'
+import { useState, useContext } from 'react'
 
-const products = [
-    {
-        id: 1,
-        name: 'Throwback Hip Bag',
-        href: '#',
-        color: 'Salmon',
-        price: '$90.00',
-        quantity: 1,
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
-        imageAlt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
-    },
-    {
-        id: 2,
-        name: 'Medium Stuff Satchel',
-        href: '#',
-        color: 'Blue',
-        price: '$32.00',
-        quantity: 1,
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
-        imageAlt:
-            'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
-    },
-    // More products...
-]
+import Header from '../components/Header'
+import { Link } from 'react-router-dom'
+import { MyContext } from '../components/context/MyContext'
+
 
 const Carrito = props => {
-    const [open, setOpen] = useState(true)
 
-    
+    const { total, setTotal, productos, carro, setCarro } = useContext(MyContext)
+    console.log("carro: ", carro)
+    console.log("productos", productos)
+    const filtrarID = (obj) => {
+        carro.map((item) => {
+            console.log('item: ', item)
+            if (item === obj.id) {
+                //console.log('id: ', obj.id, ' item: ', item, ' si')
+                return true
+            }
+            else {
+                //.log('id: ', obj.id, ' item: ', item, ' no')
+                return false
+            }
+        })
+        // carro.filter(producto => Number(producto) === Number(obj.id))
+    }
+    const products = productos.filter(filtrarID)
+
+    console.log("carro: ", carro)
+    console.log("filtrado", products)
 
     return (
         <>
@@ -63,14 +57,14 @@ const Carrito = props => {
                                                 <div>
                                                     <div className="flex justify-between text-base font-medium text-gray-900">
                                                         <h3>
-                                                            <a href={product.href}>{product.name}</a>
+                                                            <a href={product.name}>{product.name}</a>
                                                         </h3>
                                                         <p className="ml-4">{product.price}</p>
                                                     </div>
-                                                    <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+                                                    <p className="mt-1 text-sm text-gray-500">Color</p>
                                                 </div>
                                                 <div className="flex flex-1 items-end justify-between text-sm">
-                                                    <p className="text-gray-500">Qty {product.quantity}</p>
+                                                    <p className="text-gray-500">Qty</p>
 
                                                     <div className="flex">
                                                         <button
@@ -92,7 +86,7 @@ const Carrito = props => {
                     <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                         <div className="flex justify-between text-base font-medium text-gray-900">
                             <p>Subtotal</p>
-                            <p>$262.00</p>
+                            <p>${new Intl.NumberFormat('es-CL').format(total)}</p>
                         </div>
                         <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                         <div className="mt-6">

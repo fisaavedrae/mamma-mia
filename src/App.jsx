@@ -12,13 +12,14 @@ import ReadAPI from './components/ReadAPI'
 function App() {
   const [total, setTotal] = useState(0)
   const [productos, setProductos] = useState([])
+  const [carro, setCarro] = useState([])
 
   return (
     <>
-      <MyContext.Provider value={{ total, setTotal, productos, setProductos }}>
+      <MyContext.Provider value={{ total, setTotal, productos, setProductos, carro, setCarro }}>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/DetalleProducto" element={<DetalleProducto />} />
+          <Route path="/DetalleProducto/:id" element={<DetalleProducto />} />
           <Route path="/Carrito" element={<Carrito />} />
         </Routes>
         <ReadAPI />
