@@ -17,9 +17,11 @@ function App() {
   const [carro, setCarro] = useState([])
   const [orderProducts, setOrderProducts] = useState([])
 
+  const [open, setOpen] = useState(false)
+
   return (
     <>
-      <MyContext.Provider value={{ total, setTotal, productos, setProductos, carro, setCarro, orderProducts, setOrderProducts, totalOrder, setTotalOrder }}>
+      <MyContext.Provider value={{ total, setTotal, productos, setProductos, carro, setCarro, orderProducts, setOrderProducts, totalOrder, setTotalOrder, open, setOpen }}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/pizza/:id" element={<DetalleProducto />} />
