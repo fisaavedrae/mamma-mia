@@ -7,7 +7,7 @@ import { MyContext } from '../components/context/MyContext'
 
 const Carrito = props => {
 
-    const { total, setTotal, carro, setCarro, setOrderProducts } = useContext(MyContext)
+    const { total, setTotal, carro, setCarro, setOrderProducts, setTotalOrder } = useContext(MyContext)
 
     const navigate = useNavigate();
 
@@ -33,6 +33,7 @@ const Carrito = props => {
     }
     function handleCheckout() {
         setOrderProducts([...carro])
+        setTotalOrder(total)
         setCarro([])
         setTotal(0)
         navigate(`/checkout`);

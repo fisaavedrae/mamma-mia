@@ -6,7 +6,7 @@ import { MyContext } from '../components/context/MyContext'
 
 
 const Checkout = props => {
-    const { orderProducts } = useContext(MyContext)
+    const { orderProducts, totalOrder } = useContext(MyContext)
     const orderID = uuid.v1()
 
 
@@ -61,6 +61,11 @@ const Checkout = props => {
 
                 <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
 
+                    <div className="mt-6 flex justify-center text-center">
+                        <h4 className='text-lg  text-gray-900'>
+                            Monto total de la orden: <b>$ {new Intl.NumberFormat('es-CL').format(totalOrder)}</b>
+                        </h4>
+                    </div>
                     <div className="mt-6 flex justify-center text-center">
                         <h1 className='text-lg font-extrabold text-gray-900'>Muchas gracias por su compra</h1>
                     </div>

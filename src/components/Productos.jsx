@@ -9,7 +9,7 @@ const Productos = props => {
 
     const navigate = useNavigate();
     const irAProducto = (id) => {
-        navigate(`/DetalleProducto/${id}`);
+        navigate(`/pizza/${id}`);
     };
 
     const agregarCarrito = (obj) => {
@@ -61,7 +61,7 @@ const Productos = props => {
                                         </ul>
                                     </div>
                                 </div>
-                                <p className="mt-1 text-lg font-medium text-gray-900 pt-5 pb-5">$ {product.price}</p>
+                                <p className="mt-1 text-lg font-medium text-gray-900 pt-5 pb-5">$ {new Intl.NumberFormat('es-CL').format(product.price)}</p>
 
                                 <button
                                     onClick={() => irAProducto(product.id)}

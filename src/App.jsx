@@ -12,16 +12,17 @@ import Checkout from './pages/Checkout'
 
 function App() {
   const [total, setTotal] = useState(0)
+  const [totalOrder, setTotalOrder] = useState(0)
   const [productos, setProductos] = useState([])
   const [carro, setCarro] = useState([])
   const [orderProducts, setOrderProducts] = useState([])
 
   return (
     <>
-      <MyContext.Provider value={{ total, setTotal, productos, setProductos, carro, setCarro, orderProducts, setOrderProducts }}>
+      <MyContext.Provider value={{ total, setTotal, productos, setProductos, carro, setCarro, orderProducts, setOrderProducts, totalOrder, setTotalOrder }}>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/DetalleProducto/:id" element={<DetalleProducto />} />
+          <Route path="/pizza/:id" element={<DetalleProducto />} />
           <Route path="/Carrito" element={<Carrito />} />
           <Route path="/Checkout" element={<Checkout />} />
         </Routes>
