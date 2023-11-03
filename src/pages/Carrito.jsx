@@ -1,11 +1,11 @@
-import { useState, useContext } from 'react'
+import { useContext } from 'react'
 
 import { Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 
 
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { MyContext } from '../components/context/MyContext'
 
 
@@ -50,8 +50,6 @@ const Carrito = props => {
 
     return (
         <>
-
-
             <Transition.Root show={open} as={Fragment}>
                 <Dialog as="div" className="relative z-10" onClose={setOpen}>
                     <Transition.Child
@@ -61,11 +59,9 @@ const Carrito = props => {
                         enterTo="opacity-100"
                         leave="ease-in-out duration-500"
                         leaveFrom="opacity-100"
-                        leaveTo="opacity-0"
-                    >
+                        leaveTo="opacity-0">
                         <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
                     </Transition.Child>
-
                     <div className="fixed inset-0 overflow-hidden">
                         <div className="absolute inset-0 overflow-hidden">
                             <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
@@ -76,8 +72,7 @@ const Carrito = props => {
                                     enterTo="translate-x-0"
                                     leave="transform transition ease-in-out duration-500 sm:duration-700"
                                     leaveFrom="translate-x-0"
-                                    leaveTo="translate-x-full"
-                                >
+                                    leaveTo="translate-x-full">
                                     <Dialog.Panel className="pointer-events-auto w-screen max-w-md">
                                         <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
                                             <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
@@ -87,15 +82,13 @@ const Carrito = props => {
                                                         <button
                                                             type="button"
                                                             className="relative -m-2 p-2 text-gray-400 hover:text-gray-500"
-                                                            onClick={() => setOpen(false)}
-                                                        >
+                                                            onClick={() => setOpen(false)}>
                                                             <span className="absolute -inset-0.5" />
                                                             <span className="sr-only">Close panel</span>
                                                             <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                                                         </button>
                                                     </div>
                                                 </div>
-
                                                 <div className="mt-8">
                                                     <div className="flow-root">
                                                         <ul role="list" className="-my-6 divide-y divide-gray-200">
@@ -105,8 +98,7 @@ const Carrito = props => {
                                                                         <img
                                                                             src={product.imageSrc}
                                                                             alt={product.imageAlt}
-                                                                            className="h-full w-full object-cover object-center"
-                                                                        />
+                                                                            className="h-full w-full object-cover object-center" />
                                                                     </div>
                                                                     <div className="ml-4 flex flex-1 flex-col">
                                                                         <div>
@@ -115,7 +107,6 @@ const Carrito = props => {
                                                                                     <p >{product.name}</p>
                                                                                 </h3>
                                                                                 <p className="ml-4">$ {new Intl.NumberFormat('es-CL').format(Number(product.qty) * Number(product.price))}</p>
-
                                                                             </div>
                                                                             <p className="mt-1 text-sm text-gray-500"></p>
                                                                         </div>
@@ -123,10 +114,8 @@ const Carrito = props => {
                                                                             <div>
                                                                                 <div className="flex justify-between ">
                                                                                     <h3>
-
                                                                                     </h3>
                                                                                     <p className="ml-6 font-light text-sm text-gray-400"> c/u $ {new Intl.NumberFormat('es-CL').format(Number(product.price))}</p>
-
                                                                                 </div>
                                                                                 <p className="mt-1 text-sm text-gray-500"></p>
                                                                             </div>}
@@ -134,25 +123,20 @@ const Carrito = props => {
                                                                             <p className="text-gray-500"> <b>Cantidad:</b>
                                                                                 <button
                                                                                     onClick={() => restarUnidadItemCarro(product)}
-                                                                                    className="rounded-md bg-amber-600 px-1 py-1 mr-2 ml-1 text-sm font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                                                                                >
+                                                                                    className="rounded-md bg-amber-600 px-1 py-1 mr-2 ml-1 text-sm font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                                                                                     <i className="fa-solid fa-minus" ></i>
                                                                                 </button>
                                                                                 <b>{product.qty}</b>
                                                                                 <button
                                                                                     onClick={() => sumarUnidadItemCarro(product)}
-                                                                                    className="rounded-md bg-amber-600 px-1 py-1 ml-2 text-sm font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                                                                                >
+                                                                                    className="rounded-md bg-amber-600 px-1 py-1 ml-2 text-sm font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                                                                                     <i className="fa-solid fa-plus"></i>
                                                                                 </button>
                                                                             </p>
-
                                                                             <div className="flex">
-
                                                                                 <button onClick={() => quitarItemCarro(product)}
                                                                                     type="button"
-                                                                                    className="font-medium text-amber-700 hover:text-amber-500"
-                                                                                >
+                                                                                    className="font-medium text-amber-700 hover:text-amber-500">
                                                                                     <i className="fa-solid fa-trash"></i>
                                                                                 </button>
                                                                             </div>
@@ -164,30 +148,24 @@ const Carrito = props => {
                                                     </div>
                                                 </div>
                                             </div>
-
                                             <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                                                 <div className="flex justify-between text-base font-medium text-gray-900">
                                                     <p>Total</p>
                                                     <p>$ {new Intl.NumberFormat('es-CL').format(total)}</p>
                                                 </div>
-
                                                 <div className="flex flex-1 items-end justify-center text-sm">
                                                     {(total > 0) && <button
                                                         onClick={() => handleCheckout()}
-                                                        className="flex items-center justify-center rounded-md border border-transparent bg-amber-700 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-amber-500"
-                                                    >
+                                                        className="flex items-center justify-center rounded-md border border-transparent bg-amber-700 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-amber-500">
                                                         Checkout
                                                     </button>}
-
                                                 </div>
                                                 <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                                                     <p>
-
                                                         <button
                                                             type="button"
                                                             className="font-medium text-indigo-600 hover:text-indigo-500"
-                                                            onClick={() => setOpen(false)}
-                                                        >
+                                                            onClick={() => setOpen(false)}>
                                                             Continuar Comprando
                                                             <span aria-hidden="true"> &rarr;</span>
                                                         </button>

@@ -1,4 +1,4 @@
-import { useState, useContext, useId } from 'react'
+import { useContext } from 'react'
 
 import Header from '../components/Header'
 import { Link } from 'react-router-dom'
@@ -37,8 +37,7 @@ const Checkout = props => {
                                                 <img
                                                     src={product.imageSrc}
                                                     alt={product.imageAlt}
-                                                    className="h-full w-full object-cover object-center"
-                                                />
+                                                    className="h-full w-full object-cover object-center" />
                                             </div>
                                             <div className="ml-4 flex flex-1 flex-col">
                                                 <div>
@@ -50,11 +49,18 @@ const Checkout = props => {
                                                     </div>
                                                     <p className="mt-1 text-sm text-gray-500"></p>
                                                 </div>
+                                                {(product.qty > 1) &&
+                                                    <div>
+                                                        <div className="flex justify-between ">
+                                                            <h3>
+                                                            </h3>
+                                                            <p className="ml-6 font-light text-sm text-gray-400"> c/u $ {new Intl.NumberFormat('es-CL').format(Number(product.price))}</p>
+                                                        </div>
+                                                        <p className="mt-1 text-sm text-gray-500"></p>
+                                                    </div>}
                                                 <div className="flex flex-1 items-end justify-between text-sm">
                                                     <p className="text-gray-500">Cantidad: {product.qty}</p>
-
                                                     <div className="flex">
-
                                                     </div>
                                                 </div>
                                             </div>
@@ -64,9 +70,7 @@ const Checkout = props => {
                             </div>
                         </div>
                     </div>
-
                     <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
-
                         <div className="mt-6 flex justify-center text-center">
                             <h4 className='text-lg  text-gray-900'>
                                 Monto total de la orden: <b>$ {new Intl.NumberFormat('es-CL').format(totalOrder)}</b>
@@ -77,20 +81,14 @@ const Checkout = props => {
                         </div>
                         <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                             <p>
-
                                 <Link to="/" className="font-medium text-indigo-600 hover:text-indigo-500">Volver al Inicio</Link>
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
         </>
     )
 }
-
-
 
 export default Checkout

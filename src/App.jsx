@@ -16,7 +16,6 @@ function App() {
   const [productos, setProductos] = useState([])
   const [carro, setCarro] = useState([])
   const [orderProducts, setOrderProducts] = useState([])
-
   const [open, setOpen] = useState(false)
 
   return (
@@ -30,8 +29,6 @@ function App() {
         </Routes>
         <ReadAPI />
       </MyContext.Provider>
-
-
     </>
   )
 }

@@ -1,13 +1,12 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
 import { MyContext } from './context/MyContext'
 import Logo from '../assets/Mamma-Mia.png'
 import Carrito from '../pages/Carrito'
 
 
 const Header = props => {
-    const { total, open, setOpen } = useContext(MyContext)
+    const { total, setOpen } = useContext(MyContext)
     return (
         <>
             <header className=" mt-0 bg-current mb-3">

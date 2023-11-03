@@ -1,6 +1,4 @@
-import { useState, useContext } from 'react'
-import { StarIcon } from '@heroicons/react/20/solid'
-import { RadioGroup } from '@headlessui/react'
+import { useContext } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { MyContext } from '../components/context/MyContext'
 import Header from '../components/Header'
@@ -27,7 +25,6 @@ const DetalleProducto = props => {
             carro.push(obj)
             setCarro(carro)
         }
-
     }
 
 
@@ -56,8 +53,7 @@ const DetalleProducto = props => {
                                     <img
                                         src={product.imageSrc}
                                         alt={product.imageAlt}
-                                        className="h-full w-full object-cover object-center"
-                                    />
+                                        className="h-full w-full object-cover object-center" />
                                 </div>
                             </div>
                             <div className="mt-5">
@@ -66,13 +62,11 @@ const DetalleProducto = props => {
                             <div className="mt-5">
                                 <button
                                     onClick={() => agregarCarrito(product)}
-                                    className="rounded-md bg-amber-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                                >
+                                    className="rounded-md bg-amber-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                                     <i className="fa-solid fa-cart-shopping"></i>
                                 </button>
                             </div>
                         </div>
-
                         <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
                             <div>
                                 <div className="space-y-6">
@@ -91,8 +85,6 @@ const DetalleProducto = props => {
                                     </ul>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
