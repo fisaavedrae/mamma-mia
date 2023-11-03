@@ -29,7 +29,7 @@ comprar.
 según las imágenes de referencia.
 (Opcional)
 
-# Requerimientos
+# Solución
 
 El desarrollo de la app lo hice usando Tailwind como framework css usando las vistas que trae como ejemplo para el PLP, PDP, Cart y Checkout.
 
